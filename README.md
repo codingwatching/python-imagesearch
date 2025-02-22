@@ -37,3 +37,22 @@ pip3 install -U pyobjc
 ```
 I have not tested myself as I don't own a mac, but it was tested and documented in this issue : https://github.com/drov0/python-imagesearch/issues/5
 
+## Quick start
+
+The simplest example to do image search with python is this:
+
+```
+from python_imagesearch.imagesearch import imagesearch
+
+pos = imagesearch("./github.png")
+if pos[0] != -1:
+    print("position : ", pos[0], pos[1])
+else:
+    print("image not found")
+```
+
+this searches for one occurrence of the image “github.png” on the screen and print its x/y position 
+
+Some advanced examples exists here (yes I shut down my blog and forgot to save it): https://web.archive.org/web/20221130045749/https://brokencode.io/how-to-easily-image-search-with-python/
+
+Exact function definitions can be found here: https://github.com/drov0/python-imagesearch/blob/master/python_imagesearch/imagesearch.py 
